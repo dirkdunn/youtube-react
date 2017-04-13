@@ -4,7 +4,7 @@ import VideoListItem from './VideoListItem';
 class VideoList extends Component {
   render(){
     const videoListItems = this.props.videos.map((video)=>{
-      console.log(video);
+      // console.log(video);
       return (
         <VideoListItem
           key={ video.id.videoId }

@@ -3,11 +3,9 @@ import _ from 'lodash';
 import SearchBar from './components/SearchBar.js';
 import VideoList from './components/VideoList.js';
 import VideoDetail from './components/VideoDetail.js';
-
+import { YT_KEY }  from './.env.js'
 import axios from 'axios';
 import './App.css';
-
-const youtube_key = 'AIzaSyBfC-K6OUFUCitO1R5QryHPcdz2ZbH0_Tk';
 
 class App extends Component {
   constructor(props){
@@ -26,7 +24,7 @@ class App extends Component {
     axios.get('https://www.googleapis.com/youtube/v3/search', {
       params: {
         q: term,
-        key: youtube_key,
+        key: YT_KEY,
         type: 'video',
         part: 'snippet'
       }
